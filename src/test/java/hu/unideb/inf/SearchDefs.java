@@ -14,12 +14,12 @@ public class SearchDefs extends AbstractStepDefs {
 
 
     @When("the search button is clicked")
-    public void theSearchButtonIsClicked() {homePage.clickSearchButton();
+    public void theSearchButtonIsClicked() {homePage.SearchButton();
     }
 
     @Then("the {string} error message is shown in search")
     public void theMsgErrorMessageIsShownInSearch(String msg) {
-        Optional<String> errorMessage = homePage.getSearchWarningMsg();
+        Optional<String> errorMessage = homePage.getSearchWarning();
         if (errorMessage.isPresent()){
             Assert.assertEquals(msg,errorMessage.get());
 

@@ -19,7 +19,7 @@ public class CreateAccountStepdefs extends AbstractStepDefs{
         homePage.fillFieldById(fieldName, msg);}
 
     @When("the Create an account button is clicked")
-    public void theCreateAnAccountButtonIsClicked() {homePage.clickCreateAnAccountButton();}
+    public void theCreateAnAccountButtonIsClicked() {homePage.CreateAnAccountButton();}
 
     @Then("the {string} error message is shown out")
     public void theMsgErrorMessageIsShownOut(String msg) {

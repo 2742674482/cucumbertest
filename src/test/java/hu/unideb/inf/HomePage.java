@@ -78,33 +78,18 @@ public class HomePage {
 
     public void clickSignInButton() {signInButton.click();}
 
-    public void clickCreateAnAccountButton(){CreateAnAccountButton.click();}
+    public void CreateAnAccountButton(){CreateAnAccountButton.click();}
 
-    public void clickSearchButton(){searchButton.click();}
-
-
-    public void clickCartButton(){cartButton.click();}
-
-    public void clickForgetPassword(){ForgetPassword.click();}
-
-    public void clickRetrievePasswordButton(){RetrievePasswordButton.click();}
+    public void SearchButton(){searchButton.click();}
 
 
-/*
-    public void clickShortSleeveShirtImage(){
-        shortSleeveShirtImage.click();
-    }
+    public void CartButton(){cartButton.click();}
 
-    public void clickProceedToCheckOutButton(){
-        proceedToCheckOutButton.click();
-    }
+    public void ForgetPassword(){ForgetPassword.click();}
+
+    public void RetrievePasswordButton(){RetrievePasswordButton.click();}
 
 
-    public void clickAddToCartButton() throws InterruptedException {
-        addToCartButton.click();
-        Thread.sleep(10000);
-    }
-    */
 
 
     public void pressEnterButton(){
@@ -115,7 +100,6 @@ public class HomePage {
 
 
     public void fillFieldById(String fieldName , String msg){
-        getField(By.id(fieldName)).clear();
         getField(By.id(fieldName)).sendKeys(msg);
     }
 
@@ -164,13 +148,13 @@ public class HomePage {
 
     public Optional<String> getRegisterError(){return getWebErrorMsg(REGISTER_ERROR);}
 
-    public Optional<String> getSearchWarningMsg(){return getWebErrorMsg(SEARCH_WARING);}
+    public Optional<String> getSearchWarning(){return getWebErrorMsg(SEARCH_WARING);}
 
     public Optional<String> getPasswordError(){return getWebErrorMsg(PASSWORD_WARING);}
 
-    public Optional<String> getCartWarningMsg(){return getWebErrorMsg(Cart_WARING);}
+    public Optional<String> getCartWarning(){return getWebErrorMsg(Cart_WARING);}
 
-    public Optional<String> getPasswordRightMsg(){return getWebErrorMsg(PASSWORD_RIGHT);}
+    public Optional<String> getPasswordRight(){return getWebErrorMsg(PASSWORD_RIGHT);}
 
 
     public Optional<String> getWebErrorMsg(By errorLocator){

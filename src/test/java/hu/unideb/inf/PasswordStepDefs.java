@@ -20,7 +20,7 @@ public class PasswordStepDefs extends AbstractStepDefs {
 
     @And("the forget your password button is clicked")
     public void theForgetYourPasswordButtonIsClicked() {
-        homePage.clickForgetPassword();
+        homePage.ForgetPassword();
     }
 
 
@@ -32,7 +32,7 @@ public class PasswordStepDefs extends AbstractStepDefs {
 
     @When("the Retrieve Password button is clicked")
     public void theRetrievePasswordButtonIsClicked() {
-        homePage.clickRetrievePasswordButton();
+        homePage.RetrievePasswordButton();
     }
 
     @Then("the {string} error message is shown above")
@@ -46,7 +46,7 @@ public class PasswordStepDefs extends AbstractStepDefs {
 
     @Then("the {string}  message is shown")
     public void theMessageIsShown(String msg) {
-        Optional<String> errorMessage = homePage.getPasswordRightMsg();
+        Optional<String> errorMessage = homePage.getPasswordRight();
         if (errorMessage.isPresent()) {
             Assert.assertEquals(msg, errorMessage.get());
 

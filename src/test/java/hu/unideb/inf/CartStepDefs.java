@@ -11,12 +11,12 @@ import static org.junit.Assert.fail;
 public class CartStepDefs extends AbstractStepDefs {
     @Given("the Cart button is clicked")
     public void theCartButtonIsClicked() {
-        homePage.clickCartButton();
+        homePage.CartButton();
     }
 
     @Then("the {string} error message is shown in cart")
     public void theErrorMessageIsShownInCart(String msg) {
-        Optional<String> errorMessage = homePage.getCartWarningMsg();
+        Optional<String> errorMessage = homePage.getCartWarning();
         if (errorMessage.isPresent()){
             Assert.assertEquals(msg,errorMessage.get());
 
