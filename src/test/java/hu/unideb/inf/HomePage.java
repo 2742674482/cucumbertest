@@ -23,6 +23,8 @@ public class HomePage {
     private static final By REGISTER_ERROR=By.xpath("//*[@id=\"create_account_error\"]/ol/li");
     private static final By SEARCH_WARING=By.xpath("///*[@id=\"center_column\"]/p");
 
+    private static final By LETTER_ERROR=By.xpath("//*[@id=\"columns\"]/p");
+
     private static final By Cart_WARING=By.xpath("//*[@id=\"center_column\"]/p");
 
     private static final By PASSWORD_WARING=By.xpath("//*[@id=\"center_column\"]/div/div");
@@ -55,6 +57,11 @@ public class HomePage {
 
     @FindBy(xpath = "//*[@id=\"form_forgotpassword\"]/fieldset/p/button/span")
     private WebElement RetrievePasswordButton;
+
+
+    @FindBy(xpath = "//*[@id=\"newsletter_block_left\"]/div/form/div/button")
+    private WebElement Clickenter;
+
 
 
 
@@ -90,6 +97,21 @@ public class HomePage {
     public void RetrievePasswordButton(){RetrievePasswordButton.click();}
 
 
+    public void  Clickenter(){Clickenter.click();}
+
+
+    public void clickProceedToCheckOutButton(){
+        proceedToCheckOutButton.click();
+    }
+
+    public void clickShortSleeveShirtImage(){
+        shortSleeveShirtImage.click();
+    }
+
+    public void clickAddToCartButton() throws InterruptedException {
+        addToCartButton.click();
+        Thread.sleep(10000);
+    }
 
 
     public void pressEnterButton(){
@@ -147,6 +169,8 @@ public class HomePage {
     }
 
     public Optional<String> getRegisterError(){return getWebErrorMsg(REGISTER_ERROR);}
+
+    public Optional<String> getLetterError(){return getWebErrorMsg(LETTER_ERROR);}
 
     public Optional<String> getSearchWarning(){return getWebErrorMsg(SEARCH_WARING);}
 
